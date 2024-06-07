@@ -12,6 +12,7 @@ const ExplorePage = () => {
   const [selectedGenres, setSelectedGenres] = useState([])
 
   console.log("params", params.explore)
+  console.log("data", data)
 
   const fetchData = async () => {
     try {
@@ -84,7 +85,7 @@ const ExplorePage = () => {
             {
               data.map((exploreData, index) => {
                 return (
-                  <Card data={exploreData} key={exploreData.id + "exploreSEction"} media_type={params.explore} />
+                  <Card data={exploreData} key={`${exploreData.id}-${index}`} media_type={params.explore} />
                 )
               })
             }

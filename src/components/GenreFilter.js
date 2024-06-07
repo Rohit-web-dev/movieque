@@ -6,6 +6,17 @@ const genres = [
   { id: 27, name: 'Horror' },
   { id: 53, name: 'Thriller' },
   { id: 35, name: 'Comedy' },
+  { id: 37, name: 'Western' },
+  { id: 10749, name: 'Romance' },
+  { id: 80, name: 'Crime' },
+  { id: 878, name: 'Sci-Fi' },
+  { id: 18, name: 'Drama' },
+  { id: 99, name: 'Documentary' },
+  { id: 9648, name: 'Mystery' },
+  { id: 16, name: 'Animation' },
+  { id: 10402, name: 'Musical' },
+  { id: 10752, name: 'War' },
+  { id: 10756, name: 'Sports' },
 ];
 
 const GenreFilter = ({ selectedGenres, onGenreChange }) => {

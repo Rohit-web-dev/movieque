@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate  } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import useFetchDetails from '../hooks/useFetchDetails'
 import { useSelector } from 'react-redux'
@@ -10,6 +10,7 @@ import VideoPlay from '../components/VideoPlay'
 
 const DetailsPage = () => {
   const params = useParams()
+  const navigate = useNavigate();
   const imageURL = useSelector(state => state.movieoData.imageURL)
   const { data } = useFetchDetails(`/${params?.explore}/${params?.id}`)
   const { data :castData} = useFetchDetails(`/${params?.explore}/${params?.id}/credits`)
@@ -29,6 +30,11 @@ const DetailsPage = () => {
 
   const duration = (data?.runtime/60)?.toFixed(1)?.split(".")
   const writer = castData?.crew?.filter(el => el?.job === "Writer")?.map(el => el?.name)?.join(", ")
+
+  // Handle cast click
+  const handleCastClick = (castId) => {
+    navigate(`/cast/${castId}`);
+  };
 
   return (
     <div>
@@ -111,7 +117,7 @@ const DetailsPage = () => {
                     {
                       castData?.cast?.filter(el => el?.profile_path).map((starCast,index)=>{
                         return(
-                          <div>
+                          <div key={starCast.id} onClick={() => handleCastClick(starCast.id)}>
                             <div>
                               <img
                                 src={imageURL+starCast?.profile_path} 
