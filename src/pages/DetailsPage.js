@@ -33,7 +33,7 @@ const DetailsPage = () => {
 
   // Handle cast click
   const handleCastClick = (castId) => {
-    navigate(`/cast/${castId}`);
+    navigate(`/movie/${params?.id}/${castId}`);
   };
 
   return (

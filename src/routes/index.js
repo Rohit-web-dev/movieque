@@ -24,7 +24,7 @@ const router = createBrowserRouter([
                 element : <DetailsPage/>
             },
             {
-                path : "cast/:id",
+                path : ":explore/:id/:castId",
                 element : <CastDetails/>
             },
             {
