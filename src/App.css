@@ -1,3 +1,35 @@
-.scrolbar-none::-webkit-scrollbar{
+.scrolbar-none::-webkit-scrollbar {
     display: none;
+}
+
+.w-1\/4 {
+    padding: 20px;
+}
+
+.filter {
+    background: #2d2d2d;
+    height: 100%;
+}
+
+.w-3\/4 h3 {
+    /* text-align: center; */
+    margin-left: 25px;
+}
+
+@media (max-width: 500px) {
+    .w-1\/4 {
+        padding: 0;
+    }
+
+    .filter h4 {
+        font-size: 14px;
+    }
+
+    .filter div div {
+        display: flex;
+    }
+
+    .filter div div label {
+        font-size: 10px;
+    }
 }
