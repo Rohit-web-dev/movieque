@@ -257,7 +257,7 @@ const DetailsPage = () => {
 
           {appwriteData && (
             <div>
-              <h3 className='text-xl font-bold text-white mb-1'>Movieque Rating ❤️</h3>
+              <h3 className='text-xl font-bold text-white mb-1'>Movique Rating ❤️</h3>
               <p><span className='text-white'>Rating:</span> {renderStars(appwriteData.star)} ({appwriteData.star}/10)</p>
               <p><span className='text-white'></span> <b>{appwriteData.title_description}</b></p>
               <p><span className='text-white'></span> {appwriteData.description}</p>
